@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/angular.js"></script>
+    <script src="./lib/angular-ui-route.js"></script>
+    <script src="./app.module.js"></script>
+    <script src="./app.config.js"></script>
+</head>
+<body ng-app="helloSolarSystem">
+<div>
+    <a ui-sref="helloState">Hello</a>
+    <a ui-sref="aboutState">About</a>
+    <a ui-sref="peopleState">People</a>
+</div>
+
+<ui-view></ui-view>
+
+</body>
+</html>

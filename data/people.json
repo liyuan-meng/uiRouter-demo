@@ -1,0 +1,14 @@
+[
+  {
+    "name": "zhangsan",
+    "intro": "zhangsan Although UI-Router allows you to define."
+  },
+  {
+    "name": "lisi",
+    "intro": "lisi Although UI-Router allows you to define."
+  },
+  {
+    "name": "wangwu",
+    "intro": "wangwu Although UI-Router allows you to define."
+  }
+]
