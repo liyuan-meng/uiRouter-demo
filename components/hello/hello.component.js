@@ -3,11 +3,10 @@
 angular.module("hello", [])
     .component('hello', {
         templateUrl: './components/hello/hello.template.html',
-        controller: [
-            function HelloController() {
-                this.hideFirstContent = false;
-                this.ctlButton = function () {
-                    alert(433);
+        controller: ["$scope", 
+            function HelloController($scope) {
+                $scope.hideFirstContent = false;
+                $scope.ctlButton = function () {
                     this.hideFirstContent = !this.hideFirstContent;
                 };
             }
