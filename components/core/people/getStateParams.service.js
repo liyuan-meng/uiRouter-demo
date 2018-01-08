@@ -1,11 +1,12 @@
 "use strict";
 
 angular.module("getStateParams", ['ui.router']).
-    factory("GetStateParams", ["$location", function () {
+    factory("GetStateParams", ["$location", function ($location) {
         return {
             getParams: getParams
         };
         function getParams() {
-            return $location.search();
+            var partUrlArr = $location.url().split("/");
+            return partUrlArr[partUrlArr.length-1];
         }
 }]);
