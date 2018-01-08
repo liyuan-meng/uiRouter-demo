@@ -1,5 +1,8 @@
-<ul>
-    <a ng-repeat="item in people" ui-sref="peopleState.details({id:{{item.id}}})">
-        <li>{{item.name}}</li>
-    </a>
-</ul>
+<div>
+    <ul>
+        <a ng-repeat="item in people" ui-sref="peopleState.details({id:item.id})">
+            <li>{{item.name}}</li>
+        </a>
+    </ul>
+    <ui-view></ui-view>
+</div>
