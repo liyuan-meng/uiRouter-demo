@@ -7,20 +7,22 @@ angular.module('people.checkPeople', ['ui.router']).
             getData: getData
         };
         function getData(filed) {
-            var people ;
-            $http.get({
+            var people;
+            var promise =  $http({
                 method: 'GET',
                 url: './data/people.json'
             }).then(function (response) {
-                if(filed) {
-                    people = response.data.map(function (value) {
-                        if(people[filed.key] === filed.value) {
+                if (filed) {
+                    people = response.data.filter(function (value) {
+                        if (Number(value.id) === Number(filed)) {
                             return value;
                         }
                     })
                 } else {
                     people = response.data;
                 }
-            })
+                return people;
+            });
+            return promise;
         }
-}]);
+    }]);
