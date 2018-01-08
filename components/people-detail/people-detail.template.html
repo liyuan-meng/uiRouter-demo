@@ -1,4 +1,4 @@
-<ul ng-repeat="item in peopleDetails">
+<ul ng-repeat="item in peopleDetails track by $index">
     <li>名字： {{item.name}}</li>
-    <li>年龄： {{item.intro}}</li>
+    <li>介绍： {{item.intro}}</li>
 </ul>
