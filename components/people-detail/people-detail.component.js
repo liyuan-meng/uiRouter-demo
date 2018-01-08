@@ -2,10 +2,13 @@
 
 angular.module("peopleDetail", ['people.checkPeople', 'getStateParams'])
     .component('peopleDetail', {
-        template: './components/people-detail/people-detail.template.html',
-        controller: ['CheckPeople', 'GetStateParams',
-            function peopleDetailController(CheckPeople, GetStateParams) {
-                this.peopleDetails = CheckPeople(GetStateParams.getParams());
+        templateUrl: './components/people-detail/people-detail.template.html',
+        controller: ['CheckPeople', 'GetStateParams', '$scope',
+            function peopleDetailController(CheckPeople, GetStateParams, $scope) {
+                $scope.peopleDetails = [];
+                CheckPeople.getData(GetStateParams.getParams()).then(function(data){
+                    $scope.peopleDetails = data;
+                });
             }
         ]
     });
