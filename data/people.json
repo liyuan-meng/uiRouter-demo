@@ -1,13 +1,16 @@
 [
   {
+    "id":1,
     "name": "zhangsan",
     "intro": "zhangsan Although UI-Router allows you to define."
   },
   {
+    "id":2,
     "name": "lisi",
     "intro": "lisi Although UI-Router allows you to define."
   },
   {
+    "id":3,
     "name": "wangwu",
     "intro": "wangwu Although UI-Router allows you to define."
   }

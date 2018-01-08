@@ -1,12 +1,15 @@
 'use strict';
 
-angular.module("hello", ['hello.toggleContent'])
+angular.module("hello", [])
     .component('hello', {
         templateUrl: './components/hello/hello.template.html',
-        controller: ['ToggleContent',
-            function (ToggleContent) {
-                var self = this;
-                this.showFirstContent = true;
-                this.ctlButton = function() { ToggleContent.toggleContent(self.showFirstContent); };
-        }]
+        controller: [
+            function HelloController() {
+                this.hideFirstContent = false;
+                this.ctlButton = function () {
+                    alert(433);
+                    this.hideFirstContent = !this.hideFirstContent;
+                };
+            }
+        ]
     });
